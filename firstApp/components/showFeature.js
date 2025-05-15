@@ -1,9 +1,11 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-export default function ShowFeature({icon, feature, detail, color}) {
+export default function ShowFeature({icon, feature, detail, color, screen}) {
+    const navigation = useNavigation();
     return (
         <View>
-            <TouchableOpacity style={styles.product}>
+            <TouchableOpacity style={styles.product} onPress={() => navigation.replace(screen, { animation: 'none' })}>
                 <View style={[styles.iconBorder, { backgroundColor: color}]}>
                     <Image
                     source={icon}

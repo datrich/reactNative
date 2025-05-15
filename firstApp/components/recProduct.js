@@ -1,6 +1,8 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 export default function RecProduct({name, brand, image}) {
+    const navigation = useNavigation();
     return (
         <View>
             <View style={styles.product}>
@@ -13,7 +15,7 @@ export default function RecProduct({name, brand, image}) {
                     <Text style={styles.name_product}>{name}</Text>
                 </View>
                 <View style={styles.box_add_rev}>                 
-                        <TouchableOpacity style={styles.add_rev}>
+                        <TouchableOpacity style={styles.add_rev} onPress={() => navigation.navigate('Cart', { animation: 'none' })}>
                         <View
                             style={{
                                 height: 10,
@@ -52,6 +54,10 @@ const styles = StyleSheet.create({
     height: 82,
     backgroundColor: '#F8F8FB',
     borderRadius: 16,
+    shadowColor: '#AD6C48',
+    shadowOpacity: 1,
+    shadowRadius: 60,
+    elevation: 5,
   },
   image: {
     width: 52,
