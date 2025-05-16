@@ -25,9 +25,6 @@ const Cart = ({navigation}) => {
             <TouchableOpacity style={styles.box_check_out}>
                 <Text style={{fontSize: 20, fontWeight: 700, color: "#FFFFFF"}}>Proceed to checkout</Text>
             </TouchableOpacity>
-            <View style={styles.containerTab}>
-                <BottomTabCart/>
-            </View>
         </View>
     </View>
   );
@@ -38,11 +35,6 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         backgroundColor: '#ffffff',
-        },
-    containerTab: {
-        position: 'absolute',
-        bottom: 0,
-        width: '100%',
         },
     title: {
         paddingLeft: 30,

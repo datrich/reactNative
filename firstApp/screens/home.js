@@ -36,9 +36,6 @@ const Home = ({navigation}) => {
                 </View>
             </View>
         </View>
-        <View style={styles.containerTab}>
-            <BottomTabHome/>
-        </View>
     </View>
   );
 }
@@ -47,11 +44,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#FFFFFF',
-        },
-    containerTab: {
-        position: 'absolute',
-        bottom: 0,
-        width: '100%',
         },
     image: {
         width: 46,
